@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "bin/rawrwm",
+    "bin/rawrwmc",
+    "lib/utils",
+    "lib/backends/x11",
+    "lib/backends/wayland"
+]
