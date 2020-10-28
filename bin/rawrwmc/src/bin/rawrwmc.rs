@@ -1,9 +1,6 @@
 extern crate clap;
 
-use clap::{
-    App,
-    ArgMatches,
-};
+use clap::{App, ArgMatches};
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
