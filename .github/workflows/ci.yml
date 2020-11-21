@@ -1,0 +1,60 @@
+name: RawrWM builder workflow
+
+on: [push, pull_request]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: RawrWM build job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup cross-compiliation toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: nightly-2020-11-08
+
+      - name: Build RawrWM in release mode, if its a release
+        uses: actions-rs/cargo@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          command: build
+          args: --locked --all --release
+
+      - name: Build RawrWM in debug mode
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --locked --all
+
+      - name: 'Install (Cargo) binutils, if its release.'
+        if: startsWith(github.ref, 'refs/tags/')
+        run:
+          cargo install cargo-binutils && rustup component add
+          llvm-tools-preview
+
+      - name: Strip the RawrWM image, if its a release
+        if: startsWith(github.ref, 'refs/tags/')
+        run: cargo strip --release -- --strip-all
+
+      - name: Create release for RawrWM
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            target/release/rawrwm
+            target/release/rawrwmc
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Upload debug build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: rawrwm-debug
+          path: |
+            target/debug/rawrwm
+            target/debug/rawrwmc
