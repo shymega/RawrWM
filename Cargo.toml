@@ -6,3 +6,25 @@ members = [
     "lib/backends/x11",
     "lib/backends/wayland"
 ]
+
+[profile.dev]
+lto = true
+opt-level = 3
+codegen-units = 1
+debug = true
+
+[profile.dev.package."*"]
+codegen-units = 1
+opt-level = 3
+debug = true
+
+[profile.release]
+lto = true
+opt-level = 3
+codegen-units = 1
+debug = true
+
+[profile.release.package."*"]
+codegen-units = 1
+opt-level = 3
+debug = false
