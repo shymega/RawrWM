@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "bin/rawrwm",
+    "bin/rawrwmd",
     "bin/rawrwmc",
     "lib/utils",
     "lib/backends/x11",
