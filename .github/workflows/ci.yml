@@ -13,6 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install APT dependencies
+        run: apt-get update && apt-get install -y libinput-dev libudev-dev wayland-dev libx11-dev
+
       - name: Setup Rust (stable) toolchain
         uses: actions-rs/toolchain@v1
         with:
