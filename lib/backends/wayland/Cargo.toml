@@ -6,3 +6,18 @@ edition = "2018"
 
 [dependencies]
 smithay = "0.2.1"
+slog = "2.7.0"
+slog-async = "2.6.0"
+
+[dependencies.slog-journald]
+version = "2.1.1"
+optional = true
+
+[dependencies.slog-term]
+version = "2.8.0"
+optional = true
+
+# slog and other deps derived from leftwm, thanks!
+[features]
+default = ["slog-term"]
+journald = ["slog-journald"]

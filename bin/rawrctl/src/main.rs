@@ -1,5 +1,3 @@
-extern crate clap;
-
 use clap::{App, ArgMatches};
 
 const VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -14,5 +12,4 @@ fn parse_arguments() -> ArgMatches<'static> {
 
 fn main() {
     let _matches = parse_arguments();
-    unimplemented!();
 }
