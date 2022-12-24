@@ -30,7 +30,7 @@ jobs:
       - name: Upload Debug build binaries
         uses: actions/upload-artifact@v3
         with:
-          name: RawrWM-debug-${{ github.ref }}
+          name: RawrWM-debug-${{ github.ref_name }}
           path: |
             target/debug/rawrd
             target/debug/rawrctl
