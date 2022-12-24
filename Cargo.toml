@@ -2,10 +2,12 @@
 members = [
     "bin/rawrd",
     "bin/rawrctl",
-    "lib/utils",
-    "lib/backends/x11",
-    "lib/rpc",
-    "lib/backends/wayland"
+    "src/utils",
+    "src/backends/x11",
+    "src/rpc",
+    "src/backends/wayland",
+    "src/backends/windows",
+    "src/backends/macos"
 ]
 
 [profile.dev]
@@ -21,11 +23,12 @@ debug = true
 
 [profile.release]
 lto = true
-opt-level = 3
+opt-level = 's'
 codegen-units = 1
 debug = true
+strip = true
 
 [profile.release.package."*"]
 codegen-units = 1
-opt-level = 3
+opt-level = 's'
 debug = false

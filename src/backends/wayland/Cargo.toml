@@ -1,20 +1,20 @@
 [package]
-name = "rawrwm_backends_x11"
+name = "rawrwm_backend_wayland"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
-penrose = "0.2.0"
+smithay = "0.3.0"
 slog = "2.7.0"
-slog-async = "2.6.0"
+slog-async = "2.7.0"
 
 [dependencies.slog-journald]
-version = "2.1.1"
+version = "2.2.0"
 optional = true
 
 [dependencies.slog-term]
-version = "2.8.0"
+version = "2.9.0"
 optional = true
 
 # slog and other deps derived from leftwm, thanks!

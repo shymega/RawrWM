@@ -2,8 +2,8 @@
 name = "rawrwm_utils"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 slog = "2.7.0"
-slog-async = "2.6.0"
+slog-async = "2.7.0"

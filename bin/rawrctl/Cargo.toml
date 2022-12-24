@@ -2,26 +2,26 @@
 name = "rawrctl"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "rawrctl"
 path = "src/main.rs"
 
 [dependencies]
-serde = "1.0.126"
-serde_derive = "1.0.126"
-serde_json = "1.0.64"
-tokio = "1.8.1"
-futures = "0.3.15"
+serde = "1.0.151"
+serde_derive = "1.0.151"
+serde_json = "1.0.91"
+tokio = "1.23.0"
+futures = "0.3.25"
 slog = "2.7.0"
-slog-async = "2.6.0"
-slog-term = "*"
+slog-async = "2.7.0"
+slog-term = "2.9.0"
 jsonrpc-core-client = "18.0.0"
 
 [dependencies.clap]
 features = ["suggestions", "color", "wrap_help"]
-version = "2.33.3"
+version = "4.0.32"
 
 [dependencies.rawrwm_rpc]
-path = "../../lib/rpc"
+path = "../../src/rpc"
