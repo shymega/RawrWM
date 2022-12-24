@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install APT dependencies
         run: sudo apt-get update && sudo apt-get install -y libinput-dev libudev-dev libwayland-dev libx11-dev libsdl-pango-dev libdbus-1-dev pkg-config
