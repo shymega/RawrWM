@@ -31,6 +31,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "anyhow"
+version = "1.0.68"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2cb2f989d18dd141ab8ae82f64d1a8cdd37e0840f73a406896cf5e99502fab61"
+
+[[package]]
 name = "anymap"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1701,6 +1707,7 @@ dependencies = [
 name = "rawrd"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "clap",
  "futures 0.3.25",
  "jsonrpc",
@@ -1716,6 +1723,7 @@ dependencies = [
  "slog-async",
  "slog-journald",
  "slog-term",
+ "thiserror",
  "tokio",
 ]
 
