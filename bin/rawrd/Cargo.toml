@@ -41,7 +41,7 @@ optional = true
 
 [dependencies.clap]
 features = ["suggestions", "color", "wrap_help"]
-version = "4.1.4"
+version = "4.1.6"
 
 # slog and other deps derived from leftwm, thanks!
 [features]
