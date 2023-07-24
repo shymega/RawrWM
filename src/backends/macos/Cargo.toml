@@ -1,5 +1,5 @@
 [package]
-name = "rawrwm_backend_macos"
+name = "rawrwm-backend-macos"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,5 +1,5 @@
 [package]
-name = "rawrwm_utils"
+name = "rawrwm-common"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 edition = "2021"

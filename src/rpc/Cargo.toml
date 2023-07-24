@@ -1,17 +1,22 @@
 [package]
-name = "rawrwm_rpc"
+name = "rawrwm-rpc"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 edition = "2021"
 
+# slog and other deps derived from leftwm, thanks!
+[features]
+default = ["slog-term"]
+journald = ["slog-journald"]
+
 [dependencies]
 slog = "2.7.0"
 slog-async = "2.7.0"
-jsonrpc = "0.14.0"
+jsonrpc = "0.16.0"
 jsonrpc-ipc-server = "18.0.0"
 
-[dependencies.rawrwm_utils]
-path = "../utils"
+[dependencies.rawrwm-common]
+path = "../common"
 
 [dependencies.slog-journald]
 version = "2.2.0"
@@ -20,8 +25,3 @@ optional = true
 [dependencies.slog-term]
 version = "2.9.0"
 optional = true
-
-# slog and other deps derived from leftwm, thanks!
-[features]
-default = ["slog-term"]
-journald = ["slog-journald"]

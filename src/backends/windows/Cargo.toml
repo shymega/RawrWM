@@ -1,5 +1,5 @@
 [package]
-name = "rawrwm_backend_windows"
+name = "rawrwm-backend-windows"
 version = "0.1.0"
 edition = "2021"
 

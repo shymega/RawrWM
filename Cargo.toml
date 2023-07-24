@@ -1,13 +1,14 @@
 [workspace]
 members = [
-    "bin/rawrd",
-    "bin/rawrctl",
-    "src/utils",
-    "src/backends/x11",
-    "src/rpc",
+    "src/backends/macos",
     "src/backends/wayland",
     "src/backends/windows",
-    "src/backends/macos"
+    "src/backends/x11",
+    "src/bin/rawrctl",
+    "src/bin/rawrd",
+    "src/guile",
+    "src/rpc",
+    "src/common"
 ]
 
 [profile.dev]

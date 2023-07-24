@@ -1,0 +1,49 @@
+[package]
+name = "rawrd"
+version = "0.1.0"
+authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
+edition = "2021"
+
+# slog and other deps derived from leftwm, thanks!
+[features]
+default = ["slog-term"]
+journald = ["slog-journald"]
+
+[[bin]]
+name = "rawrd"
+path = "src/main.rs"
+
+[dependencies]
+serde = "1.0.175"
+serde_derive = "1.0.175"
+serde_json = "1.0.103"
+log = "0.4.19"
+tokio = { version = "1.29.1", features = ["full"] }
+futures = "0.3.28"
+anyhow = "1.0.72"
+thiserror = "1.0.44"
+slog = "2.7.0"
+slog-async = "2.7.0"
+jsonrpc = "0.16.0"
+jsonrpc-ipc-server = "18.0.0"
+
+[dependencies.rawrwm-backend-wayland]
+path = "../../backends/wayland"
+
+[dependencies.rawrwm-backend-x11]
+path = "../../backends/x11"
+
+[dependencies.rawrwm-common]
+path = "../../common"
+
+[dependencies.slog-journald]
+version = "2.2.0"
+optional = true
+
+[dependencies.slog-term]
+version = "2.9.0"
+optional = true
+
+[dependencies.clap]
+features = ["suggestions", "color", "wrap_help"]
+version = "4.3.19"
