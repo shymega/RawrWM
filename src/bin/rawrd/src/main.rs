@@ -15,8 +15,6 @@
     variant_size_differences
 )]
 
-use std::io::Error;
-
 use anyhow::{Context, Result};
 use thiserror::Error;
 
