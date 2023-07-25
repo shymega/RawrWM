@@ -28,7 +28,7 @@
 
         # For `nix develop`:
         devShell = pkgs.mkShell {
-          nativeBuildInputs = with pkgs; [ rustc cargo ];
+          nativeBuildInputs = with pkgs; [ rustc cargo pkg-config cmake ];
           buildInputs = with pkgs; [ systemd.dev dbus.dev ];
         };
       }
