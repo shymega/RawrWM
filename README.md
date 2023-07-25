@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 The RawrWM Developers
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
 # RawrWM
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)

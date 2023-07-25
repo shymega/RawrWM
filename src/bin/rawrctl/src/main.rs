@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 The RawrWM Developers
+//
+// SPDX-License-Identifier: Apache-2.0
+
 //! Client for controlling `RawrWM`.
 #![deny(
     warnings,

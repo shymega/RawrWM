@@ -1,6 +1,5 @@
-# SPDX-FileCopyrightText: The Steam-ToyBox Developers
-#
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-FileCopyrightText: 2023 The RawrWM Developers
+# SPDX-License-Identifier: Apache-2.0
 
 {
   inputs = {

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2023 The RawrWM Developers
+//
+// SPDX-License-Identifier: Apache-2.0
+
 //! X11 backend crate for `RawrWM`.
 #![deny(
     warnings,

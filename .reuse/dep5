@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: RawrWM
+Upstream-Contact: Dom Rodriguez (shymega) <shymega@shymega.org.uk>
+Source: https://github.com/shymega/RawrWM
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
