@@ -26,20 +26,20 @@ enum AppStartError {
     InitializationError,
 }
 
-const VERSION: &str = env!("CARGO_PKG_VERSION");
+type AppStartResult = Result<(), AppStartError>;
 
 #[cfg(target_os = "windows")]
-async fn windows_main() -> Result<(), AppStartError> {
+async fn windows_main() -> AppStartResult {
     Ok(())
 }
 
 #[cfg(target_os = "macos")]
-async fn macos_main() -> Result<(), AppStartError> {
+async fn macos_main() -> AppStartResult {
     Ok(())
 }
 
 #[cfg(target_os = "linux")]
-async fn linux_main() -> Result<(), AppStartError> {
+async fn linux_main() -> AppStartResult {
     Ok(())
 }
 
