@@ -19,6 +19,7 @@ use anyhow::{Context, Result};
 use thiserror::Error;
 
 #[derive(Error, Debug)]
+#[allow(dead_code)]
 enum AppStartError {
     #[error("Initialization error")]
     InitializationError,
