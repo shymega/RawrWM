@@ -23,7 +23,7 @@ RawrWM is based around 'backends'. The idea is to have a unifying API exposed by
 
 It's heavily a work in progress, but integration is expected with [automon][automon], another project of mine, and [guile-rs][guile-rs].
 
-Ideas and notes can be seen [here](/docs/NOTES.md)
+Ideas and notes can be seen [here](/docs/NOTES.md).
 
 ## Table of Contents
 
