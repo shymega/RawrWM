@@ -9,5 +9,4 @@ authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 edition = "2021"
 
 [dependencies]
-slog = "2.7.0"
-slog-async = "2.7.0"
+rawrwm-backends = { path = "../backends" }

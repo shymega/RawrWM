@@ -4,14 +4,9 @@
 
 [workspace]
 members = [
-    "src/backends/macos",
-    "src/backends/wayland",
-    "src/backends/windows",
-    "src/backends/x11",
+    "src/backends",
     "src/bin/rawrctl",
     "src/bin/rawrd",
-    "src/guile",
-    "src/rpc",
     "src/common"
 ]
 

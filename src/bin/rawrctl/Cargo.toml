@@ -18,14 +18,11 @@ serde_derive = "1.0.175"
 serde_json = "1.0.103"
 tokio = "1.29.1"
 futures = "0.3.28"
-slog = "2.7.0"
-slog-async = "2.7.0"
-slog-term = "2.9.0"
 jsonrpc-core-client = "18.0.0"
 
 [dependencies.clap]
 features = ["suggestions", "color", "wrap_help"]
 version = "4.3.19"
 
-[dependencies.rawrwm-rpc]
-path = "../../rpc"
+[dependencies.rawrwm-common]
+path = "../../common"

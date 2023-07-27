@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 
-//! X11 backend crate for `RawrWM`.
+//! Conditionally-compiled, all backends crate for `RawrWM`.
 #![deny(
     warnings,
     missing_copy_implementations,
@@ -12,7 +12,6 @@
     clippy::cargo,
     trivial_casts,
     trivial_numeric_casts,
-    unsafe_code,
     unused_import_braces,
     unused_qualifications,
     unused_extern_crates,
