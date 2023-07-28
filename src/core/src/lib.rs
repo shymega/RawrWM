@@ -21,5 +21,13 @@
 
 pub mod reexports {
     //! Re-exports of RawrWM components.
-    pub use rawrwm_backends::*;
+    pub use anyhow;
+    pub use dirs;
+    pub use jsonrpc;
+    pub use jsonrpc_core_client;
+    pub use jsonrpc_ipc_server;
+    pub use rawrwm_backends as backends;
+    pub use serde;
+    pub use thiserror;
+    pub use tokio;
 }

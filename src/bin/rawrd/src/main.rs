@@ -19,8 +19,9 @@
     variant_size_differences
 )]
 
-use anyhow::{Context, Result};
-use thiserror::Error;
+pub use rawrwm::reexports::anyhow::{Context, Result};
+pub use rawrwm::reexports::thiserror::Error;
+pub use rawrwm_core as rawrwm;
 
 #[derive(Error, Debug)]
 #[allow(dead_code)]
@@ -41,8 +42,11 @@ async fn macos_main() -> AppStartResult {
     Ok(())
 }
 
-#[cfg(target_os = "linux")]
-async fn linux_main() -> AppStartResult {
+#[cfg(all(
+    target_family = "unix",
+    not(any(target_os = "ios", target_os = "macos"))
+))]
+async fn unix_main() -> AppStartResult {
     Ok(())
 }
 
@@ -54,8 +58,11 @@ async fn main() -> Result<()> {
     #[cfg(target_os = "macos")]
     macos_main().await.context("Initialization error?")?;
 
-    #[cfg(target_os = "linux")]
-    linux_main().await.context("Initialization error?")?;
+    #[cfg(all(
+        target_family = "unix",
+        not(any(target_os = "ios", target_os = "macos"))
+    ))]
+    unix_main().await.context("Initialization error?")?;
 
     Ok(())
 }

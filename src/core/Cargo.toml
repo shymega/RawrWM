@@ -9,4 +9,15 @@ authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 edition = "2021"
 
 [dependencies]
+anyhow = "1.0.72"
+dirs = "5.0.1"
+env_logger = "0.10.0"
+futures = "0.3.28"
+jsonrpc = { version = "0.16.0", default-features = false, features = ["base64"] }
+jsonrpc-core-client = { version = "18.0.0", features = ["ipc"] }
+jsonrpc-ipc-server = "18.0.0"
+log = "0.4.19"
 rawrwm-backends = { path = "../backends" }
+serde = { version = "1.0.177", features = ["derive"] }
+thiserror = "1.0.44"
+tokio = { version = "1.29.1", features = ["full", "io-util", "net", "rt", "time", "sync"], default-features = false }
