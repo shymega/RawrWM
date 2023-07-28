@@ -17,3 +17,15 @@
     unused_extern_crates,
     variant_size_differences
 )]
+
+#[cfg_attr(
+    all(
+        target_family = "unix",
+        not(any(target_os = "ios", target_os = "macos"))
+    ),
+    path = "platforms/unix/mod.rs"
+)]
+#[cfg_attr(target_os = "windows", path = "platforms/windows/mod.rs")]
+#[cfg_attr(target_os = "macos", path = "platforms/macos/mod.rs")]
+mod platform;
+pub use crate::platform::*;
