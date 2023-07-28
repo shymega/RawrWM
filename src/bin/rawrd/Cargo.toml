@@ -24,8 +24,8 @@ thiserror = "1.0.44"
 jsonrpc = "0.16.0"
 jsonrpc-ipc-server = "18.0.0"
 
-[dependencies.rawrwm-common]
-path = "../../common"
+[dependencies.rawrwm-core]
+path = "../../core"
 
 [dependencies.clap]
 features = ["suggestions", "color", "wrap_help"]

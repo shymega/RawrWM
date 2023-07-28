@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: Apache-2.0
 
-//! Common (shared) backend crate for `RawrWM`.
+//! Core (shared) crate for `RawrWM`.
 #![deny(
     warnings,
     missing_copy_implementations,
@@ -18,3 +18,8 @@
     unused_extern_crates,
     variant_size_differences
 )]
+
+pub mod reexports {
+    //! Re-exports of RawrWM components.
+    pub use rawrwm_backends::*;
+}

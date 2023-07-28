@@ -7,7 +7,7 @@ members = [
     "src/backends",
     "src/bin/rawrctl",
     "src/bin/rawrd",
-    "src/common"
+    "src/core"
 ]
 
 [profile.dev]
