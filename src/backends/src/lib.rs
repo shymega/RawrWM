@@ -27,5 +27,6 @@
 )]
 #[cfg_attr(target_os = "windows", path = "platforms/windows/mod.rs")]
 #[cfg_attr(target_os = "macos", path = "platforms/macos/mod.rs")]
-mod platform;
-pub use crate::platform::*;
+pub mod platform;
+
+pub mod common;
