@@ -17,7 +17,7 @@ wayland = ["smithay"]
 
 [target.'cfg(all(target_family = "unix", not(any(target_os = "ios", target_os = "macos"))))'.dependencies]
 breadx = { version = "3.1.0", optional = true }
-smithay = { verison = "0.3.0", optional = true }
+smithay = { version = "0.3.0", optional = true }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 core-graphics = "0.23.1"
