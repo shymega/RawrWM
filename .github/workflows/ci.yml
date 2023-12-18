@@ -32,7 +32,7 @@ jobs:
           args: --locked --all
 
       - name: Upload Debug build binaries
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: RawrWM-debug-${{ github.ref_name }}
           path: |
